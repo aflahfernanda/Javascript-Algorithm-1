@@ -1,7 +1,4 @@
-function seleksiNilai(a,b,arr){
-var arr1=arr.map(function(e){
-    return e;
-})
+function seleksiNilai(a,b,arr1){
 let arrLength=arr1.length
 let arr2=arr1.filter(function(x){
     return x>a && x<b;
@@ -27,4 +24,9 @@ else if(arrLengthhasil<=0){
 }
 
 seleksiNilai(5,20,[2,25,4,14,17,30,8])
+seleksiNilai(20,5,[2,25,4,14,17,30,8])
+seleksiNilai(30,40,[2,25,4,14,17,30,8])
+seleksiNilai(5,20,[2,25,4,14])
+seleksiNilai('lima',40,[2,25,4,14,17,30,8])
+
 
