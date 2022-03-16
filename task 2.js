@@ -1,6 +1,6 @@
 //fungsi template penyampaian data
-function callback(){
-    console.log('hasil data adalah: ')
+function callback(data){
+    console.log(data)
 }
 //fungsi pencarian data
 function searchName(hurufNama,jumlahArr,myCallback){
@@ -22,12 +22,13 @@ function searchName(hurufNama,jumlahArr,myCallback){
     const arrCariNama=cariNama.length
     
     if (arrCariNama>=1){
-        myCallback(callback)
-        console.log(cariNama.slice(0,jumlahArr))
-    }else if(arrCariNama<=0){
-        myCallback(callback)
-      console.log('tidak tersedia nama yang mengandung unsur '+hurufNama)
+        myCallback(cariNama.slice(0,jumlahArr))
+        // console.log(cariNama.slice(0,jumlahArr))
+    }else if(arrCariNama<1){
+        myCallback('tidak tersedia nama yang mengandung unsur '+hurufNama)
+    //   console.log('tidak tersedia nama yang mengandung unsur '+hurufNama)
+     }
     }
-    }
-    searchName('an',3,callback)
+
+    searchName('1',4,callback)
     
